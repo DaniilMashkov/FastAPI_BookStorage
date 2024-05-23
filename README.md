@@ -26,9 +26,14 @@
       alembic upgrade head
       uvicorn app.main:app --host 0.0.0.0 --port 8000
   ```
+ Приложение будет доступно по адресу
+   ```bash
+         http://localhost:8000/docs
+   ```
+
 ##
 
-- запуск тестов командой
+- Запуск тестов командой
   ```bash
       pytest
   ```
