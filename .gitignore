@@ -19,6 +19,6 @@ postgres_data
 .env.local
 .vscode/
 .coverage
-db*
+*.db
 celerybeat-schedule
 uploads/

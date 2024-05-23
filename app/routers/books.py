@@ -20,8 +20,12 @@ router = APIRouter(
     tags=["books"]
 )
 
-@router.post("/", response_model=schemas.Book,
-             summary='Upload book', description='Accepts PDF up to 2MB')
+@router.post("/",
+             response_model=schemas.Book,
+             summary='Upload book',
+             description='Accepts PDF files up to 2MB in size.\
+                    Uploading the same file is restricted.\
+                    Book titles with authors must be unique.')
 async def create_book(
     title: str = Form(...),
     author: str = Form(...),
